@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-wiidth, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <tittle>web</tittle>
+        <tittle>Blog de Videojuegos</tittle>
     </head>
     <body>
         <!-- ENCABEZADO-->
