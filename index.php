@@ -5,10 +5,12 @@
         <meta name="viewport" content="width=device-wiidth, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Blog de Videojuegos</title>
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     </head>
     <body>
         <!-- ENCABEZADO-->
-        <header>
+        <header id="header">
+            <!--LOGO-->
            <div id="logo">
                 <a href="index.php">
                     Blog de videojuegos
@@ -40,6 +42,7 @@
                     </li>
                 </ul>
             </nav>
+            <div class="clearfix"></div>
         </header>
         <div id="container">
             <!-- SIDEBAR-->
@@ -79,46 +82,56 @@
             <div id="principal">
                 <h1>Ultimas entradas</h1>
 
-                <article>
-                    <h2>Titulo de mi entrada</h2>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus dolor, sollicitudin non facilisis sed, pretium sed nisl. 
-                    Donec magna lorem, euismod eu ullamcorper at, viverra quis neque. Pellentesque pretium consequat magna, nec cursus turpis ultricies eu. 
-                    Cras vehicula libero non elit molestie interdum. Etiam et nibh id sapien malesuada posuere. 
-                    </p>
+                <article class="entrada">
+                    <a href="">
+                        <h2>Titulo de mi entrada</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus dolor, sollicitudin non facilisis sed, pretium sed nisl. 
+                        Donec magna lorem, euismod eu ullamcorper at, viverra quis neque. Pellentesque pretium consequat magna, nec cursus turpis ultricies eu. 
+                        Cras vehicula libero non elit molestie interdum. Etiam et nibh id sapien malesuada posuere. 
+                        </p>
+                    </a>
                 </article>
 
-                <article>
-                    <h2>Titulo de mi entrada</h2>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus dolor, sollicitudin non facilisis sed, pretium sed nisl. 
-                    Donec magna lorem, euismod eu ullamcorper at, viverra quis neque. Pellentesque pretium consequat magna, nec cursus turpis ultricies eu. 
-                    Cras vehicula libero non elit molestie interdum. Etiam et nibh id sapien malesuada posuere. 
-                    </p>
+                <article class="entrada">
+                    <a href="">
+                        <h2>Titulo de mi entrada</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus dolor, sollicitudin non facilisis sed, pretium sed nisl. 
+                        Donec magna lorem, euismod eu ullamcorper at, viverra quis neque. Pellentesque pretium consequat magna, nec cursus turpis ultricies eu. 
+                        Cras vehicula libero non elit molestie interdum. Etiam et nibh id sapien malesuada posuere. 
+                        </p>
+                    </a>
+                </article class="entrada">
+
+                <article class="entrada">
+                    <a href="">
+                        <h2>Titulo de mi entrada</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus dolor, sollicitudin non facilisis sed, pretium sed nisl. 
+                        Donec magna lorem, euismod eu ullamcorper at, viverra quis neque. Pellentesque pretium consequat magna, nec cursus turpis ultricies eu. 
+                        Cras vehicula libero non elit molestie interdum. Etiam et nibh id sapien malesuada posuere. 
+                        </p>
+                    </a>
                 </article>
 
-                <article>
-                    <h2>Titulo de mi entrada</h2>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus dolor, sollicitudin non facilisis sed, pretium sed nisl. 
-                    Donec magna lorem, euismod eu ullamcorper at, viverra quis neque. Pellentesque pretium consequat magna, nec cursus turpis ultricies eu. 
-                    Cras vehicula libero non elit molestie interdum. Etiam et nibh id sapien malesuada posuere. 
-                    </p>
-                </article>
-
-                <article>
-                    <h2>Titulo de mi entrada</h2>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus dolor, sollicitudin non facilisis sed, pretium sed nisl. 
-                    Donec magna lorem, euismod eu ullamcorper at, viverra quis neque. Pellentesque pretium consequat magna, nec cursus turpis ultricies eu. 
-                    Cras vehicula libero non elit molestie interdum. Etiam et nibh id sapien malesuada posuere. 
-                    </p>
+                <article class="entrada">
+                    <a href="">
+                        <h2>Titulo de mi entrada</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus dolor, sollicitudin non facilisis sed, pretium sed nisl. 
+                        Donec magna lorem, euismod eu ullamcorper at, viverra quis neque. Pellentesque pretium consequat magna, nec cursus turpis ultricies eu. 
+                        Cras vehicula libero non elit molestie interdum. Etiam et nibh id sapien malesuada posuere. 
+                        </p>
+                    </a>
                 </article>
             </div>
-            <!-- PIE DE PAGINA-->
-            <footer id="footer">
-                <p>Powered by: Sergio Osorio &copy; 2021</p>
-            </footer>
+            <div class="clearfix"></div>
         </div>
+        <!-- PIE DE PAGINA-->
+        <footer id="footer">
+            <p>Powered by: Sergio Osorio &copy; 2021</p>
+        </footer>
+        
     </body>
 </html>
