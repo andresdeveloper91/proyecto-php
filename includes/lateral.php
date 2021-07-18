@@ -1,3 +1,5 @@
+<?php require_once 'includes/helper.php'; ?>
+
 <div id="container">
 <!-- SIDEBAR-->
 <aside id="sidebar">
@@ -14,21 +16,27 @@
         </form>
     </div>
     <div id="register" class="block-aside">
+        
         <h3>Registrate</h3>
         <form action="register.php" method="POST">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" />
+            <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'nombre') : ''; ?>
 
             <label for="apellidos">Apellidos</label>
             <input type="text" name="apellidos" />
+            <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'apellidos') : ''; ?>
 
             <label for="email">Email</label>
             <input type="email" name="email" />
+            <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'email') : ''; ?>
             
             <label for="passsword">Contraseña</label>
             <input type="password" name="password" />
+            <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'password') : ''; ?>
 
-            <input type="submit" value="Registrar" />
+            <input type="submit" name = "submit" value="Registrar" />
         </form>
+        <?php borrarErrores(); ?>
     </div>
 </aside>
