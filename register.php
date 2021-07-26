@@ -1,7 +1,13 @@
 <?php
-session_start();
 if(isset($_POST)){
 
+    //conexion a la base de datos
+    require_once 'includes/conexion.php';
+
+
+    if(!isset($_SESSION)){
+        session_start();
+    }
     //Recoger los datos de registro
     /*uso del operador ternario, de esta 
     manera se evita usar el if/else*/
@@ -12,10 +18,10 @@ if(isset($_POST)){
         $nombre = false;
         }*/
     $errores = array();
-    $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
-    $apellidos = isset($_POST['apellidos']) ? $_POST['apellidos'] : false;
-    $email = isset($_POST['email']) ? $_POST['email'] : false;
-    $password = isset($_POST['password']) ? $_POST['password'] : false;
+    $nombre = isset($_POST['nombre']) ? mysqli_real_escape_string($db, $_POST['nombre']) : false;
+    $apellidos = isset($_POST['apellidos']) ? mysqli_real_escape_string($db, $_POST['apellidos']) : false;
+    $email = isset($_POST['email']) ? mysqli_real_escape_string($db, trim($_POST['email'])) : false;
+    $password = isset($_POST['password']) ? mysqli_real_escape_string($db, $_POST['password']) : false;
 
     //validar los datos del formulario antes de guardarlos en la BD
     //validar nombre
@@ -52,19 +58,38 @@ if(isset($_POST)){
 
 
     $guardar_usuario = false;
+
     if(count($errores) == 0){
         $guardar_usuario = true;
 
         //Cifrar la contraseña
         $password_segura = password_hash($password, PASSWORD_BCRYPT, ['cost'=>4]);
 
-        var_dump($password);
+       /* var_dump($password);
+        echo "<br/>";
         var_dump($password_segura);
+        echo "<br/>";
+        //ESTA FUNCION SIRVE PARA VERIFICAR LA CONTRASEÑA
+        var_dump(password_verify('Hola', $password_segura));
         die();
+        */
 
         //insertar registro en la tabla usuario de la DB
+        $sql = "INSERT INTO usuarios VALUES(null, '$nombre', '$apellidos', '$email', '$password_segura', CURDATE());";
+        $guardar = mysqli_query($db, $sql);
+
+        if($guardar){
+            $_SESSION['completado'] = "Registro exitoso";
+        }else{
+            $_SESSION['errores']['general'] = "Fallo al crear usuario";
+        }
+
+        
     }else{
-        $_SESSION['errores'] = $errores;
-        header('Location: index.php');
+        $_SESSION['errores'] = $errores;       
     }
+    
 }
+
+header('Location: index.php');
+

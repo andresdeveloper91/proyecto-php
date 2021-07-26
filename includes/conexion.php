@@ -7,7 +7,7 @@ $dbname = "blog_master";
 
 $db = mysqli_connect($server, $dbuser, $password, $dbname);
 
-//Seteamos las tildes y eñes
+//Seteamos o configuramos para que admita o traiga las tildes y eñes de la BD
 mysqli_query($db, "SET NAMES 'utf8'");
 
 //Iniciar la sesion
