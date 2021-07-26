@@ -15,7 +15,7 @@
             <label for="email">Email</label>
             <input type="email" name="email" />
 
-            <label for="passsword">Contraseña</label>
+            <label for="password">Contraseña</label>
             <input type="password" name="password" />
 
             <input type="submit" value="Entrar" />
