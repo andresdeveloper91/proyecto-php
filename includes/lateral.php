@@ -4,13 +4,24 @@
 <!-- SIDEBAR-->
 <aside id="sidebar">
     <?php if(isset($_SESSION['usuario'])): ?>
-        <div id="usuario-logueado" class="bloque">
+        <div id="usuario-logueado" class="block-aside">
             <h3>Bienvenido, <?=$_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos'];?></h3>
+            <!--botones-->
+            <a href="cerrar.php" class="boton boton-verde">Crear entradas</a>
+            <a href="cerrar.php" class="boton">Crear categoria</a>
+            <a href="cerrar.php" class="boton boton-naranja">Mis datos</a>
+            <a href="cerrar.php" class="boton boton-rojo">Cerrar sesión</a>
         </div>
         <?php endif; ?>
 
     <div id="login" class="block-aside">
         <h3>Identificate</h3>
+
+        <?php if(isset($_SESSION['error_login'])): ?>
+            <div class="alerta alerta-error">
+                <?=$_SESSION['error_login'];?>
+            </div>
+        <?php endif; ?>
         <form action="login.php" method="POST">
             <label for="email">Email</label>
             <input type="email" name="email" />

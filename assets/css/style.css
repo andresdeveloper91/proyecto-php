@@ -148,11 +148,11 @@ input[type="email"],
 input[type="password"]{
     padding: 5px;
     margin-bottom: 10px;
-
 }
 
 input[type="button"],
-input[type="submit"]{
+input[type="submit"],
+.boton{
     margin-top: 5px;
     margin-bottom: 5px;
     display: block;
@@ -161,9 +161,27 @@ input[type="submit"]{
     background: #007ee5;
     border: 1px solid #156785;
     cursor: pointer;
-    padding: 7px;
-   
-    
+    padding: 7px;  
+}
+
+.boton{
+    text-align: center;
+    width: 130px;
+}
+
+.boton-naranja{
+    background: orange;
+    border-color: #bd7d08;
+}
+
+.boton-verde{
+    background: #21b921;
+    border-color: green;
+}
+
+.boton-rojo{
+    background: red;
+    border-color: #444;
 }
 
 /*PRINCIPAL*/
